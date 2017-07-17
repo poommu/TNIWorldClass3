@@ -1,0 +1,551 @@
+@font-face{
+    font-family: 'Superspace';
+    font-weight: normal;
+    src: url('../fonts/Superspace/Superspace Light ver 1.00.otf');
+}
+
+@font-face{
+    font-family: 'Superspace Bold';
+    font-weight: bold;
+    src: url('../fonts/Superspace/Superspace Bold ver 1.00.otf');
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    font-family: "Superspace";
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFDA8F;
+    z-index: 20000;
+    display: table;
+}
+
+.loading-logo{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.loading-logo img{
+    max-width: 100%;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.menu{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    margin-top: 30px;
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 26px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+}
+
+.menu ul li:last-child{
+    border-right: none;
+}
+
+.menu div{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+div.menu-center{
+    background: transparent;
+    display: table;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    /*width: 640px;*/
+}
+
+.menu a{
+    margin: -3px;
+}
+
+.menu-main{
+    background: rgba(255,255,255,0.1);
+}
+
+.menu ul li.active{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul li:hover{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul a{
+    color: #272F35;
+    text-decoration: none;
+}
+
+div.menu-side-container{
+    top: 0;
+    position: absolute;
+}
+
+.menu div.menu-list-container{
+    position: relative;
+}
+
+.menu-list-left{
+    position: absolute;
+}
+
+.menu-list-right{
+    position: absolute;
+}
+
+
+img.img-logo{
+    position: absolute;
+    max-height: none;
+    margin-top: -46px;
+    margin-left: -45px;
+    height: 74px;
+    padding: 10px;
+    padding-top: 20px;
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0);
+    transition: border, margin-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+
+img.img-logo:hover{
+    margin-top: -30px;
+
+}
+
+.menu-logo{
+    background: none !important;
+    width: 36px;
+    border: none;
+
+}
+
+#mountain {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 14;
+    max-width: 88%;
+}
+
+#littlemountain {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 12;
+    max-width: 88%;
+}
+
+#ring {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    max-width: 88%;
+}
+
+#title {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 16;
+    opacity: 1;
+    max-width: 88%;
+    bottom: 1%;
+}
+
+@keyframes hidetitle {
+    from {opacity: 1}
+    to {opacity: 0}
+    from {z-index: 16}
+    to {z-index: -1}
+}
+
+@keyframes showtitle {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 16}
+}
+
+#mountainhover {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    max-width: 88%;
+}
+
+.showhover {
+    z-index: 100;
+    width: 38%;
+    height: 50%;
+    background: transparent;
+    position: absolute;
+    top: 33%;
+    left: 6%;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.registerblock {
+    z-index: -1;
+    background: url(../images/Homeedit/regis_BG.png);
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    top: 5%;
+    width: 88%;
+    height: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+.backregisterblock {
+    z-index: -1;
+    background: url(../images/Homeedit/regis_BG.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+@keyframes regisblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10001}
+}
+
+@keyframes hideregisblock {
+    from {z-index: 10001}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes backregisblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10000}
+}
+
+@keyframes hidebackregisblock {
+    from {z-index: 10000}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+
+@keyframes showlinemou {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 15}
+}
+
+@keyframes hidelinemou {
+    from {opacity: 1}
+    to {opacity: 0}
+    from {z-index: 15}
+    to {z-index: -1}
+}
+
+
+
+#cloundfronttotam {
+    max-width: none;
+    width: 150%;
+    height: 60%;
+    margin: auto;
+    z-index: 5;
+    top: 55%;
+    animation: clofronto 80s infinite linear ;
+    left: 0%;
+}
+
+@keyframes clofronto {
+    0%   {left:0%;}
+    50%  {left:-50%;}
+    100% {left:0%;}
+}
+
+
+#totambehidemountain {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    max-width: 88%;
+}
+
+#backmountaincloud {
+    max-width: none;
+    width: 150%;
+    height: 60%;
+    margin: auto;
+    right: 0%;
+    z-index: 4;
+    top: 35%;
+    animation: backmouclo 80s infinite linear ;
+}
+@keyframes backmouclo {
+    0%   {right:0%;}
+    50%  {right:-50%;}
+    100% {right:0%;}
+}
+
+
+#lastbackmountaincloud {
+    max-width: none;
+    width: 150%;
+    height: 60%;
+    margin: auto;
+    right: -13%;
+    z-index: 2;
+    top: 20%;
+    animation: lastclound 100s infinite linear ;
+}
+
+@keyframes lastclound {
+    0%   {right:-13%;}
+    50%  {right:-38%;}
+    100% {right:-13%;}
+}
+
+#beforelastclound {
+    max-width: none;
+    width: 150%;
+    height: 60%;
+    margin: auto;
+    z-index: 3;
+    top: 28%;
+    animation: beforelastclound 90s infinite linear ;
+    left: 0%;
+}
+
+@keyframes beforelastclound {
+    0%   {left: 0%;}
+    50%  {left: -50%;}
+    100% {left: 0%;}
+}
+
+
+#totambehidebottomcloud {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    max-width: 88%;
+    top: 3%;
+}
+
+#bottomcloud {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    top: 5%;
+}
+
+#bottomcloudfront {
+    max-width: none;
+    width: 150%;
+    height: 60%;
+    margin: auto;
+    left: 0;
+    z-index: 21;
+    top: 74%;
+    animation:  bottomcloudfronts 120s infinite linear;
+}
+
+@keyframes bottomcloudfronts {
+    0%   {left: 0%;}
+    50%  {left: -50%;}
+    100% {left: 0%;}
+}
+
+
+
+#sky {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#ringhover {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    max-width: 88%;
+}
+
+@keyframes showringmou {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 16}
+}
+
+@keyframes hideringmou {
+    from {opacity: 1}
+    to {opacity: 0}
+    from {z-index: 16}
+    to {z-index: -1}
+}
+
+#orahover {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    max-width: 88%;
+}
+
+
+@keyframes showora {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 14}
+}
+
+@keyframes hideora {
+    from {opacity: 1}
+    to {opacity: 0}
+    from {z-index: 14}
+    to {z-index: -1}
+}
+
+#littlecloudleft {
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    animation: littleclound 16s infinite linear ;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+#littlecloudright {
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    animation: littleclound 14s infinite linear ;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+@keyframes littleclound {
+    0%   {left:0px; top:0px;}
+    50%  {left:150px; top:0px;}
+    100% {left:0; top:0px;}
+}

@@ -1,0 +1,232 @@
+@font-face{
+    font-family: 'Superspace';
+    font-weight: normal;
+    src: url('../fonts/Superspace/Superspace Light ver 1.00.otf');
+}
+
+@font-face{
+    font-family: 'Superspace Bold';
+    font-weight: bold;
+    src: url('../fonts/Superspace/Superspace Bold ver 1.00.otf');
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    font-family: "Superspace";
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.menu{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+    margin-top: 30px;
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 26px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+.menu div{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+div.menu-center{
+    background: transparent;
+    display: table;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    /*width: 640px;*/
+}
+
+.menu a{
+    margin: -3px;
+}
+
+.menu-main{
+    background: rgba(255,255,255,0.1);
+}
+
+.menu ul li.active{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul li:hover{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul a{
+    color: white;
+    text-decoration: none;
+}
+
+div.menu-side-container{
+    top: 0;
+    position: absolute;
+}
+
+.menu div.menu-list-container{
+    position: relative;
+}
+
+.menu-list-left{
+    position: absolute;
+}
+
+.menu-list-right{
+    position: absolute;
+}
+
+img.img-logo{
+    position: absolute;
+    max-height: none;
+    margin-top: -46px;
+    margin-left: -45px;
+    height: 74px;
+    padding: 10px;
+    padding-top: 20px;
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0);
+    transition: border, margin-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+
+img.img-logo:hover{
+    margin-top: -30px;
+
+}
+
+.menu-logo{
+    background: none !important;
+    width: 36px;
+    border: none;
+}
+
+#cbg {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#clight {
+    width: 1000px;
+    height: 1000px;
+    z-index: 100;
+    top: -500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-animation:lspin 30s linear infinite;
+    -moz-animation:lspin 30s linear infinite;
+    animation:lspin 30s linear infinite;
+    max-width: none;
+    max-height: none;
+}
+@-moz-keyframes lspin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes lspin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes lspin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#cc1 {
+    max-height: none;
+    max-width: none;
+    width: 180%;
+    height: 380%;
+    right: -50.5%;
+    bottom: -52.5%;
+    z-index: 50;
+    -webkit-animation:lspin 100s linear infinite;
+    -moz-animation:lspin 100s linear infinite;
+    animation:lspin 100s linear infinite;
+}
+
+#cc2 {
+    max-height: none;
+    max-width: none;
+    width: 180%;
+    top: -72%;
+    left: -40%;
+    height: 360%;
+    z-index: 45;
+    -webkit-animation:lspin 75s linear infinite;
+    -moz-animation:lspin 75s linear infinite;
+    animation:lspin 75s linear infinite;
+}
+
+#cc3 {
+    max-height: none;
+    max-width: none;
+    width: 180%;
+    height: 360%;
+    top: -160%;
+    left: -36%;
+    z-index: 40;
+    -webkit-animation:lspin 140s linear infinite;
+    -moz-animation:lspin 140s linear infinite;
+    animation:lspin 140s linear infinite;
+}
+
