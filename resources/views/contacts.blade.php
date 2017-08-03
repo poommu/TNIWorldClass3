@@ -12,11 +12,12 @@
     <meta property="og:title" content="TNI World Class #3">
     <meta property="og:url" content="https://tniworldclass.com/">
     <meta property="og:image" content="/images/WC3_poster.png">
-    <link href="css/gallerystyle.css" rel="stylesheet">
+    <link href="css/contacts.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/wc3gal.js"></script>
+    <script src="js/wc3contacts.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
 </head>
-<body onload="myfunction()">
+<body onload="load()">
 <div class="screen">
     <div class="menu">
         <div class="menu-center">
@@ -41,19 +42,44 @@
             <img src="images/Logo_new/button-01.png" class="img-logo-mobile" id="img-logo-mobile" alt="TNI World Class" onclick="showmobilemenu()">
         </div>
     </div>
-    <img id="gbg" class="l" src="images/GalleryPage/galver2/ver2/gall_bg.png">
-    <img id="lleft" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_left2-01.png" onclick="hidemobilemenu()">
-    <img id="lright" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_right2-01.png" onclick="hidemobilemenu()">
-    <img id="galarrowleft" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_left.png">
-    <img id="galarrowright" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_right.png">
-    <div id="imgslide">
-        <img id="galframe" class="l" src="images/GalleryPage/galver2/ver2/gall_frame.png" onclick="hidemobilemenu()">
-        <div id="outimg">
-            <img src="images/Slideimg/img1.jpg" id="img">
-        </div>
-        <div id="left_holder" onmouseover="showleft()" onmouseleave="hideleft()"><img class="left" src="images/Slideimg/arrow-left.svg" onclick="slide(-1)"></div>
-        <div id="right_holder" onmouseover="showright()" onmouseleave="hideright()"><img class="right" src="images/Slideimg/arrow-right.svg" onclick="slide(1)"></div>
+    <img id="cbg" src="images/edit/cont_bg.png">
+    <img id="clight" src="images/ContactPage/cont_light.png" onclick="hidemobilemenu()">
+    <img id="clound1" src="images/edit/cont_stupidC1.png">
+    <img id="clound2" src="images/edit/cont_stupidC2.png" onclick="hidemobilemenu()">
+    <img id="clound3" src="images/edit/cont_stupidC3.png">
+    <img id="clound4" src="images/ContactPage/clound/cont_stupidC4.png">
+    <img id="clound5" src="images/ContactPage/clound/cont_stupidC5.png">
+    <img id="clound6" src="images/ContactPage/clound/cont_stupidC6.png">
+    <img id="contact" src="images/edit/cont_contact1.png">
+    <img id="contacthover" src="images/edit/cont_contact2.png">
+    <div class="showcontact" onmouseover="mouseoverfinction()" onmouseout="mouseleavefinction()" onclick="showcontact()"></div>
+    <div class="contactblock">
+        <p>
+            <b>
+                <u>
+                    <center>
+                        ติดต่อเรา
+                    </center>
+                </u>
+                <br>
+            </b>
+        <table border="0" style="margin: auto;">
+            <tr>
+                <td>พี่เซิง&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>081-750-2623</td>
+            </tr>
+            <tr>
+                <td>พี่มายด์&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>086-057-7217</td>
+            </tr>
+            <tr>
+                <td>Facebook&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><a href="https://fb.me/TNIWorldClass" target="_blank">TNI World Class</a></td>
+            </tr>
+        </table>
+        </p>
     </div>
+    <div class="backcontactblock" onclick="hidecontact()"></div>
 </div>
 </body>
 </html>

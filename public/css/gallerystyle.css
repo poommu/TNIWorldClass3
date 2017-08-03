@@ -15,41 +15,17 @@ html, body{
     height: 100%;
 }
 
+
 body{
     margin: 0;
     min-height: 100%;
     width: 100%;
-    background: url(../images/GalleryPage/galver2/ver2/gall_bg.png)no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     font-family: "Superspace";
     font-size: 24px;
     color: white;
     position: relative;
 }
 
-.loading{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../images/GalleryPage/galver2/ver2/gall_bg.png)no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    z-index: 20000;
-    display: table;
-}
-
-.loading-logo{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-.loading-logo img{
-    margin-top: 8%;
-    max-width: 100%;
-}
 .screen {
     position: relative;
     width: 100%;
@@ -61,6 +37,7 @@ body{
     position: absolute;
     max-height: 100%;
     max-width: 100%;
+    transform: translateZ(0);
 }
 
 div {
@@ -74,7 +51,7 @@ div {
     right: 0;
     width: 100%;
     text-align: center;
-    z-index: 10000;
+    z-index: 300;
     margin-top: 30px;
 }
 
@@ -88,7 +65,7 @@ div {
     display: inline-block;
     padding: 15px 30px;
     padding-bottom: 13px;
-    font-size: 22px;
+    font-size: 26px;
     margin: 0px;
     transition: background, border;
     transition-duration: 0.2s;
@@ -102,7 +79,7 @@ div {
     display: inline-block;
     padding: 15px 30px;
     padding-bottom: 13px;
-    font-size: 22px;
+    font-size: 24px;
     margin: 0px;
     transition: background, border;
     transition-duration: 0.2s;
@@ -117,7 +94,7 @@ div.menu-center{
     margin: auto;
     border-radius: 0 0 10px 10px;
     padding: 0;
-    /*width: 640px;*/
+
 }
 
 .menu a{
@@ -168,7 +145,7 @@ img.img-logo{
     position: absolute;
     max-height: none;
     margin-top: -46px;
-    margin-left: -48px;
+    margin-left: -45px;
     height: 74px;
     padding: 10px;
     padding-top: 20px;
@@ -191,47 +168,132 @@ img.img-logo:hover{
     border: none;
 }
 .l {
-    z-index: 10;
+
+}
+
+#gbg {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
 }
 
 #lleft {
-    right: 115px;
-    top: 7%;
+    width: 120%;
+    height: 130%;
+    right: 0;
+    top: -14%;
     bottom: 0;
-    max-width: none;
-    margin: auto;
-}
+    max-height: none;
 
-#lright{
-    top: 7%;
+    left: -10.5%;
+    z-index: 10;
+    max-width: none;
+}
+#lright {
+    width: 120%;
+    height: 130%;
+    top: -14%;
+    left: -10.5%;
+    right: 0;
+    max-height: none;
+    max-width: none;
     bottom: 0;
-    left: 115px;
-    max-width: none;
-    margin: auto;
-}
 
+    z-index: 11;
+}
 #galframe {
-    top: 18%;
+    width: 90.5%;
+    height: 99.5%;
+    top: 12%;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 40;
+    z-index: 20;
     opacity: 0;
 }
 #galarrowleft {
-    left:0;
-    right: 200px;
-    top: 15%;
+    height: 7.5%;
+    width: 8%;
+    left: 37%;
+    right: 0;
+    top: 53%;
     bottom: 0;
-    margin: auto;
+    z-index: 15;
 }
 #galarrowright {
-    left: 205px;
+    height: 7.5%;
+    width: 8%;
     right: 0;
-    top: 15%;
+    left: 54%;
+    top: 53%;
     bottom: 0;
+    z-index: 16;
+}
+
+#imgslide {
+    width: 85%;
+    height: 81%;
+    top: 13%;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
+    position: relative;
+    opacity: 0;
+    z-index: 40;
+}
+#outimg {
+    width: 74%;
+    left: 12.9%;
+    height: 84%;
+    top: 13%;
+    position: absolute;
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+}
+
+#left_holder {
+    width: 15%;
+    left: 13%;
+    height: 84%;
+    top: 13%;
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+
+}
+
+#right_holder {
+    width: 15%;
+    right: 13.2%;
+    height: 84%;
+    top: 13%;
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+}
+.left {
+
+    width: 100%;
+    height: 100px;
+    top: 38%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 41;
+}
+
+.right {
+    width: 100%;
+    height: 100px;
+    top: 38%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 41;
 }
 
 @keyframes fadegal {
@@ -241,23 +303,432 @@ img.img-logo:hover{
 
 
 @keyframes mymovelleft {
-    from {right: 115px;}
-    to {right: 415.5px;}
+    from {left: -10.5%;}
+    to {left: -42.4%;}
 
 }
 
 @keyframes mymovelright {
-    from {left: 115px;}
-    to {left: 413.5px;}
+    from {left: -10.5%;}
+    to {left: 22%;}
 }
 
 @keyframes mymovealeft {
-    from {left: 205px;}
-    to {left: 805px;}
+    from {left: 37%;}
+    to {left: 5%;}
 
 }
 
 @keyframes mymovearight {
-    from {right: 200px;}
-    to {right: 800px;}
+    from {left: 54%;}
+    to {left: 86.5%;}
 }
+
+div.menu-mobile{
+    display: none;
+}
+
+@media all and (max-width: 780px) {
+    .menu ul li {
+
+        font-size: 20px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+    #right_holder {
+        width: 15%;
+        right: 6.7%;
+        height: 84%;
+        top: 13%;
+        position: absolute;
+        cursor: pointer;
+        z-index: -1;
+    }
+    #left_holder {
+        width: 15%;
+        left: 7%;
+        height: 84%;
+        top: 13%;
+        position: absolute;
+        cursor: pointer;
+        z-index: -1;
+    }
+    #outimg {
+        width: 85%;
+        left: 7.7%;
+        height: 84%;
+        top: 13%;
+        position: absolute;
+    }
+    #galframe {
+        width: 105%;
+        height: 99%;
+        top: 12%;
+        bottom: 0;
+        left: -2%;
+        right: 0;
+        margin: auto;
+        z-index: 20;
+        opacity: 0;
+        max-width: none;
+    }
+    #imgslide {
+        width: 85%;
+        height: 81%;
+        top: 13%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: relative;
+        opacity: 0;
+        z-index: 40;
+    }
+    #galarrowright {
+        height: 7.5%;
+        width: 9%;
+        right: 0;
+        left: 54%;
+        top: 53%;
+        bottom: 0;
+        z-index: 16;
+    }
+    @keyframes mymovearight {
+        from {left: 54%;}
+        to {left: 90.5%;}
+    }
+    #galarrowleft {
+        height: 7.5%;
+        width: 9%;
+        left: 37%;
+        right: 0;
+        top: 53%;
+        bottom: 0;
+        z-index: 15;
+    }
+    @keyframes mymovealeft {
+        from {left: 37%;}
+        to {left: 1%;}
+
+    }
+    #lright {
+        width: 130%;
+        height: 130%;
+        top: -14%;
+        left: -15%;
+        right: 0;
+        max-height: none;
+        max-width: none;
+        bottom: 0;
+        z-index: 11;
+    }
+    @keyframes mymovelleft {
+        from {left: -15.5%;}
+        to {left: -52.1%;}
+
+    }
+
+    #lleft {
+        width: 130%;
+        height: 130%;
+        right: 0;
+        top: -14%;
+        bottom: 0;
+        max-height: none;
+        left: -15.5%;
+        z-index: 10;
+        max-width: none;
+    }
+
+    @keyframes mymovelright {
+        from {left: -15%;}
+        to {left: 22.7%;}
+    }
+
+}
+
+
+@media all and (max-width: 680px) {
+    .menu ul li {
+
+        font-size: 16px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+
+
+}
+
+@media all and (max-width: 608px) {
+    .menu ul li {
+
+        font-size: 14px;
+
+    }
+
+    .menu div {
+
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 562px) {
+    .menu ul li {
+
+        font-size: 12px;
+
+    }
+
+    .menu div {
+
+        font-size: 12px;
+    }
+}
+
+
+@media all and (max-width: 535px){
+
+    .menu ul a {
+        color: white;
+    }
+
+
+
+    .menu ul li {
+
+        font-size: 26px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+    #menu{
+        width: 300%;
+        left: -99%;
+        position: absolute;
+    }
+    #menu li{
+        display: none;
+    }
+    #menu li#menu-main{
+
+        display: none;
+        padding: 0;
+    }
+    div.menu-mobile{
+        display: block;
+        background: #272F35;
+        margin-top: -463px;
+        transition: margin-top;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-in-out;
+        border-bottom: 2px solid #B2AFAA;
+    }
+    #menu-slide li{
+        display: block;
+        padding: 10px 0;
+    }
+    #menu-slide li:hover{
+        display: block;
+        padding: 10px 0;
+        background: rgba(255,255,255,0.3);
+    }
+    img.img-logo-mobile{
+        max-height: none;
+        margin-top: 13px;
+        margin-left: -48px;
+        height: 74px;
+        padding: 10px;
+        padding-top: 20px;
+        background: #272F35;
+        border-radius: 0 0 47px 47px;
+        cursor: pointer;
+        border: 2px solid #B2AFAA;
+        border-top: transparent;
+    }
+    #imgslide {
+        width: 120.7%;
+        height: 81%;
+        top: 13%;
+        bottom: 0;
+        left: -10.7%;
+        right: 0;
+        margin: auto;
+        position: relative;
+        opacity: 0;
+        z-index: 40;
+    }
+    #lleft {
+        width: 200%;
+        height: 130%;
+        right: 0;
+        top: -14.5%;
+        bottom: 0;
+        max-height: none;
+        left: -51%;
+        z-index: 10;
+        max-width: none;
+
+    }
+    @keyframes mymovelleft {
+        from {left: -51%;}
+        to {left: -101%;}
+    }
+
+    #galarrowright {
+        height: 7.5%;
+        width: 15%;
+        right: 0;
+        left: 54%;
+        top: 53%;
+        bottom: 0;
+        z-index: 16;
+    }
+
+
+    @keyframes mymovearight {
+        from {left: 54%;}
+        to {left: 106%;}
+
+    }
+
+    #galarrowleft {
+        height: 7.5%;
+        width: 15%;
+        left: 29%;
+        right: 0;
+        top: 53%;
+        bottom: 0;
+        z-index: 15;
+    }
+
+    @keyframes mymovealeft {
+        from {left: 29%;}
+        to {left: -21%;}
+
+    }
+
+    #lright {
+        width: 200%;
+        height: 130%;
+        top: -14.5%;
+        left: -51%;
+        right: 0;
+        max-height: none;
+        max-width: none;
+        bottom: 0;
+        z-index: 11;
+
+    }
+
+    @keyframes mymovelright {
+        from {left: -51%;}
+        to {left: 1%;}
+    }
+
+    #galframe {
+        width: 125%;
+        height: 99.5%;
+        top: 12%;
+        bottom: 0;
+        left: -12%;
+        right: 0;
+        margin: auto;
+        z-index: 20;
+        opacity: 0;
+        max-width: none;
+    }
+}
+
+@media all and (max-width: 390px) {
+    #right_holder {
+        width: 15%;
+        right: 6.7%;
+        height: 52.5%;
+        top: 29%;
+        position: absolute;
+        cursor: pointer;
+        z-index: -1;
+    }
+    #left_holder {
+        width: 15%;
+        left: 7%;
+        height: 52.5%;
+        top: 29%;
+        position: absolute;
+        cursor: pointer;
+        z-index: -1;
+    }
+    #outimg {
+        width: 85%;
+        left: 7.7%;
+        height: 53.5%;
+        top: 28.5%;
+        position: absolute;
+    }
+    #galframe {
+        width: 129%;
+        height: 65.5%;
+        top: 12%;
+        bottom: 0;
+        left: -14%;
+        right: 0;
+        margin: auto;
+        z-index: 20;
+        opacity: 0;
+        max-width: none;
+    }
+    #lright {
+        width: 200%;
+        height: 90%;
+        top: 8%;
+        left: -51%;
+        right: 0;
+        max-height: none;
+        max-width: none;
+        bottom: 0;
+        z-index: 11;
+    }
+    #lleft {
+        width: 200%;
+        height: 90%;
+        right: 0;
+        top: 8%;
+        bottom: 0;
+        max-height: none;
+        left: -51%;
+        z-index: 10;
+        max-width: none;
+    }
+    #galarrowleft {
+        height: 6.5%;
+        width: 15%;
+        left: 29%;
+        right: 0;
+        top: 55%;
+        bottom: 0;
+
+    }
+    #galarrowright {
+        height: 6.5%;
+        width: 15%;
+        right: 0;
+        left: 54%;
+        top: 55%;
+        bottom: 0;
+        z-index: 16;
+    }
+}
+

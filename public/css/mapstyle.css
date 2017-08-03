@@ -1,0 +1,796 @@
+@font-face{
+    font-family: 'Superspace';
+    font-weight: normal;
+    src: url('../fonts/Superspace/Superspace Light ver 1.00.otf');
+}
+
+@font-face{
+    font-family: 'Superspace Bold';
+    font-weight: bold;
+    src: url('../fonts/Superspace/Superspace Bold ver 1.00.otf');
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    font-family: "Superspace";
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    transform: translateZ(0);
+}
+
+div {
+    display: block;
+}
+
+.menu{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 300;
+    margin-top: 30px;
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 26px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+.menu div{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+div.menu-center{
+    background: transparent;
+    display: table;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+
+}
+
+.menu a{
+    margin: -3px;
+}
+
+.menu-main{
+    background: rgba(255,255,255,0.1);
+}
+
+.menu ul li.active{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul li:hover{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul a{
+    color: white;
+    text-decoration: none;
+}
+
+div.menu-side-container{
+    top: 0;
+    position: absolute;
+}
+
+.menu div.menu-list-container{
+    position: relative;
+}
+
+.menu-list-left{
+    position: absolute;
+}
+
+.menu-list-right{
+    position: absolute;
+}
+
+img.img-logo{
+    position: absolute;
+    max-height: none;
+    margin-top: -46px;
+    margin-left: -45px;
+    height: 74px;
+    padding: 10px;
+    padding-top: 20px;
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0);
+    transition: border, margin-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+
+img.img-logo:hover{
+    margin-top: -30px;
+
+}
+
+.menu-logo{
+    background: none !important;
+    width: 36px;
+    border: none;
+}
+
+#mbg {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    margin: auto;
+}
+
+#mfro {
+    width: 90%;
+    height: 100%;
+    z-index: 11;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+}
+
+#mhor {
+    width: 90%;
+    height: 100%;
+    z-index: 16;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+}
+
+#min {
+    width: 90%;
+    height: 100%;
+    z-index: 14;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+    animation:qleftrightm 3s ease-in infinite;
+}
+
+@keyframes qleftrightm {
+    0% {transform:rotate(20deg);top: 1.5%}
+    25% {transform:rotate(0deg);top: 1.9%}
+    50% {transform:rotate(-12deg);top: 2.2%}
+    75% {transform:rotate(0deg);top: 1.9%}
+    100% { transform:rotate(20deg);top: 1.5%}
+}
+
+#mke {
+    width: 90%;
+    height: 100%;
+    z-index: 15;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+    animation:qleftright 2s ease-in infinite;
+}
+@keyframes qleftright {
+    0% {transform:rotate(-18deg);top: 1.5%}
+    25% {transform:rotate(0deg);top: 1.9%}
+    50% {transform:rotate(10deg);top: 2.2%}
+    75% {transform:rotate(0deg);top: 1.9%}
+    100% { transform:rotate(-18deg);top: 1.5%}
+}
+
+#mkeb {
+    width: 90%;
+    height: 100%;
+    z-index: 12;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+
+}
+
+
+#mkes {
+    width: 90%;
+    height: 100%;
+    z-index: 13;
+    margin: auto;
+    top: 2%;
+    left: 5%;
+
+}
+
+#maptotni {
+    width: 100%;
+    height: 100%;
+}
+
+
+#mstar {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin: auto;
+}
+
+.showmap {
+    width: 34%;
+    height: 77%;
+    background: transparent;
+    position: absolute;
+    top: 20%;
+    left: -2%;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.mapblock {
+    z-index: -1;
+    background: url(../images/shadowmorelight0.5-01.png);
+    border-radius: 30px;
+    position: absolute;
+    top: 7%;
+    width: 75%;
+    height: 78.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    padding: 30px 30px;
+    overflow: visible;
+}
+
+b {
+    font-family: "Superspace Bold";
+}
+
+#googlemap {
+    border:0 ;
+    width:100%;
+    height:60%;
+}
+
+.backmapblock {
+    z-index: -1;
+    background: url(../images/Homeedit/regis_BG.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+@keyframes mapblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10001}
+}
+
+@keyframes hidemapblock {
+    from {z-index: 10001}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes backmapblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10000}
+}
+
+@keyframes hidebackmapblock {
+    from {z-index: 10000}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+
+div.menu-mobile{
+    display: none;
+}
+
+@media all and (max-width: 1320px) {
+    #googlemap {
+        border:0 ;
+        width:100%;
+        height:56%;
+    }
+}
+
+@media all and (max-width: 780px) {
+    .menu ul li {
+
+        font-size: 20px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+    #googlemap {
+        border:0 ;
+        width:100%;
+        height:60%;
+    }
+}
+@media all and (max-width: 880px) {
+
+    #mfro {
+        width: 120%;
+        height: 100%;
+        z-index: 11;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        max-width: none;
+    }
+    #mhor {
+        width: 120%;
+        height: 100%;
+        z-index: 16;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        max-width: none;
+    }
+    #min {
+        width: 120%;
+        height: 100%;
+        z-index: 14;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        animation: qleftrightm 3s ease-in infinite;
+        max-width: none;
+    }
+    #mke {
+        width: 120%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        animation: qleftright 2s ease-in infinite;
+        max-width: none;
+    }
+
+    #mkeb {
+        width: 120%;
+        height: 100%;
+        z-index: 12;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        max-width: none;
+    }
+
+    #mkes {
+        width: 120%;
+        height: 100%;
+        z-index: 13;
+        margin: auto;
+        top: 2%;
+        left: -10%;
+        max-width: none;
+    }
+    .showmap {
+        width: 45%;
+        height: 77%;
+        background: transparent;
+        position: absolute;
+        top: 19%;
+        left: -2%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+}
+@media all and (max-width: 680px) {
+    .menu ul li {
+
+        font-size: 16px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+}
+
+@media all and (max-width: 608px) {
+    .menu ul li {
+
+        font-size: 14px;
+
+    }
+
+    .menu div {
+
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 562px) {
+    .menu ul li {
+
+        font-size: 12px;
+
+    }
+
+    .menu div {
+
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 535px) {
+
+    .menu ul a {
+        color: white;
+    }
+
+    .menu ul li {
+
+        font-size: 26px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+    #menu {
+        width: 300%;
+        left: -99%;
+        position: absolute;
+    }
+
+    #menu li {
+        display: none;
+    }
+
+    #menu li#menu-main {
+
+        display: none;
+        padding: 0;
+    }
+
+    div.menu-mobile {
+        display: block;
+        background: #272F35;
+        margin-top: -463px;
+        transition: margin-top;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-in-out;
+        border-bottom: 2px solid #B2AFAA;
+    }
+
+    #menu-slide li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #menu-slide li:hover {
+        display: block;
+        padding: 10px 0;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    img.img-logo-mobile {
+        max-height: none;
+        margin-top: 13px;
+        margin-left: -48px;
+        height: 74px;
+        padding: 10px;
+        padding-top: 20px;
+        background: #272F35;
+        border-radius: 0 0 47px 47px;
+        cursor: pointer;
+        border: 2px solid #B2AFAA;
+        border-top: transparent;
+    }
+
+    #mfro {
+        width: 220%;
+        height: 95%;
+        z-index: 11;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        max-width: none;
+    }
+
+    #mhor {
+        width: 220%;
+        height: 95%;
+        z-index: 16;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        max-width: none;
+    }
+
+    #min {
+        width: 220%;
+        height: 95%;
+        z-index: 14;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        animation: qleftrightmh 3s ease-in infinite;
+        max-width: none;
+    }
+
+    @keyframes qleftrightmh {
+        0% {
+            transform: rotate(20deg);
+            top: 5.5%;
+        }
+        25% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        50% {
+            transform: rotate(-12deg);
+            top: 6.2%;
+        }
+        75% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        100% {
+            transform: rotate(20deg);
+            top: 5.5%;
+        }
+    }
+
+
+    #mke {
+        width: 220%;
+        height: 95%;
+        z-index: 15;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        animation: qleftright 2s ease-in infinite;
+        max-width: none;
+    }
+
+    @keyframes qleftright {
+        0% {
+            transform: rotate(-18deg);
+            top: 5.5%;
+        }
+        25% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        50% {
+            transform: rotate(10deg);
+            top: 6.2%;
+        }
+        75% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        100% {
+            transform: rotate(-18deg);
+            top: 5.5%;
+        }
+    }
+
+    #mkeb {
+        width: 220%;
+        height: 95%;
+        z-index: 12;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        max-width: none;
+    }
+    #mkes {
+        width: 220%;
+        height: 95%;
+        z-index: 13;
+        margin: auto;
+        top: 6%;
+        left: -58%;
+        max-width: none;
+    }
+    .showmap {
+        width: 82%;
+        height: 73%;
+        background: transparent;
+        position: absolute;
+        top: 22%;
+        left: -1%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+}
+
+@media all and (max-width: 330px){
+    #mfro {
+        width: 250%;
+        height: 95%;
+        z-index: 11;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        max-width: none;
+    }
+    #mhor {
+        width: 250%;
+        height: 100%;
+        z-index: 16;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        max-width: none;
+    }
+
+    #min {
+        width: 250%;
+        height: 95%;
+        z-index: 14;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        animation: qleftrighthh 3s ease-in infinite;
+        max-width: none;
+    }
+    @keyframes qleftrighthh {
+        0% {
+            transform: rotate(20deg);
+            top: 5.5%;
+        }
+        25% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        50% {
+            transform: rotate(-12deg);
+            top: 6.2%;
+        }
+        75% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        100% {
+            transform: rotate(20deg);
+            top: 5.5%;
+        }
+    }
+    #mke {
+        width: 250%;
+        height: 95%;
+        z-index: 15;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        animation: qleftrighthh 2s ease-in infinite;
+        max-width: none;
+    }
+
+    @keyframes qleftrighthh {
+        0% {
+            transform: rotate(-18deg);
+            top: 5.5%;
+        }
+        25% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        50% {
+            transform: rotate(10deg);
+            top: 6.2%;
+        }
+        75% {
+            transform: rotate(0deg);
+            top: 5.9%;
+        }
+        100% {
+            transform: rotate(-18deg);
+            top: 5.5%;
+        }
+    }
+
+    #mkeb {
+        width: 250%;
+        height: 95%;
+        z-index: 12;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        max-width: none;
+    }
+    #mkes {
+        width: 250%;
+        height: 95%;
+        z-index: 13;
+        margin: auto;
+        top: 6%;
+        left: -72%;
+        max-width: none;
+    }
+    .showmap {
+        width: 92%;
+        height: 77%;
+        background: transparent;
+        position: absolute;
+        top: 22%;
+        left: 0%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+}

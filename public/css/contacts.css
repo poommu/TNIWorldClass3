@@ -1,0 +1,875 @@
+@font-face{
+    font-family: 'Superspace';
+    font-weight: normal;
+    src: url('../fonts/Superspace/Superspace Light ver 1.00.otf');
+}
+
+@font-face{
+    font-family: 'Superspace Bold';
+    font-weight: bold;
+    src: url('../fonts/Superspace/Superspace Bold ver 1.00.otf');
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    background: white;
+    font-family: "Superspace";
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    transform: translateZ(0);
+}
+
+div {
+    display: block;
+}
+
+.menu{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 300;
+    margin-top: 30px;
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 26px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+.menu div{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 30px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    margin: 0px;
+    transition: background, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border-bottom: 2px solid rgba(255,255,255,0);
+
+}
+
+div.menu-center{
+    background: transparent;
+    display: table;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+
+}
+
+.menu a{
+    margin: -3px;
+}
+
+.menu-main{
+    background: rgba(255,255,255,0.1);
+}
+
+.menu ul li.active{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul li:hover{
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-decoration: underline;
+    font-family: "Superspace Bold";
+}
+
+.menu ul a{
+    color: white;
+    text-decoration: none;
+}
+
+div.menu-side-container{
+    top: 0;
+    position: absolute;
+}
+
+.menu div.menu-list-container{
+    position: relative;
+}
+
+.menu-list-left{
+    position: absolute;
+}
+
+.menu-list-right{
+    position: absolute;
+}
+
+img.img-logo{
+    position: absolute;
+    max-height: none;
+    margin-top: -46px;
+    margin-left: -45px;
+    height: 74px;
+    padding: 10px;
+    padding-top: 20px;
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0);
+    transition: border, margin-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+
+img.img-logo:hover{
+    margin-top: -30px;
+
+}
+
+.menu-logo{
+    background: none !important;
+    width: 36px;
+    border: none;
+}
+
+
+#cbg {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#clight {
+    width: 99%;
+    height: 165%;
+    z-index: 40;
+    top: -30%;
+    left: 1%;
+    margin: auto;
+    animation:lspin 30s linear infinite;
+    max-width: none;
+    max-height: none;
+    transform: none;
+}
+@keyframes lspin {
+    100% {  transform:rotate(360deg); }
+}
+
+#clound1 {
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    margin: auto;
+}
+#clound2 {
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    margin: auto;
+}
+#clound3 {
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    margin: auto;
+}
+
+#clound4 {
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    margin: auto;
+}
+
+#clound5 {
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    margin: auto;
+}
+
+#clound6 {
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    margin: auto;
+}
+
+#contact {
+    width: 100%;
+    height: 100%;
+    z-index: 26;
+    margin: auto;
+    animation : updown 1.5s linear infinite;
+    top: 0%;
+    bottom: 0;
+}
+
+@keyframes updown {
+    0% {top: 0%;}
+    50%{top: 2%;}
+    100%{top: 0%}
+}
+
+.showcontact {
+    width: 49%;
+    height: 59%;
+    background: transparent;
+    position: absolute;
+    top: 25%;
+    left: -18%;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#contacthover {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin: auto;
+    animation : updown 1.5s linear infinite;
+    top: 0%;
+    bottom: 0;
+}
+
+a {
+    color: white;
+}
+
+b {
+    font-family: "Superspace Bold";
+}
+
+.contactblock {
+    z-index: -1;
+    background: url(../images/shadowmorelight0.5-01.png);
+    border-radius: 30px 30px 30px 30px;
+    position: absolute;
+    top: 37%;
+    width: 75%;
+    height: 29%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    padding: 0px 30px;
+    overflow: visible;
+}
+
+.backcontactblock {
+    z-index: -1;
+    background: url(../images/Homeedit/regis_BG.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+@keyframes contactblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10001}
+}
+
+@keyframes hidecontactblock {
+    from {z-index: 10001}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes backcontactblock {
+    from {opacity: 0}
+    to {opacity: 1}
+    from {z-index: -1}
+    to {z-index: 10000}
+}
+
+@keyframes hidebackcontactblock {
+    from {z-index: 10000}
+    to {z-index: -1}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+
+div.menu-mobile{
+    display: none;
+}
+
+@media all and (max-width: 790px) {
+    #clight {
+        width: 139%;
+        height: 165%;
+        z-index: 40;
+        top: -30%;
+        left: -17%;
+        margin: auto;
+        animation: lspin 30s linear infinite;
+        max-width: none;
+        max-height: none;
+    }
+    #clound1 {
+        width: 140%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        left: -18%;
+        max-width: none;
+    }
+    #clound2 {
+        width: 140%;
+        height: 100%;
+        z-index: 25;
+        margin: auto;
+        max-width: none;
+        left: -18%;
+        top: 17%;
+    }
+    #clound3 {
+        width: 140%;
+        height: 100%;
+        z-index: 20;
+        margin: auto;
+        max-width: none;
+        left: -18%;
+    }
+    #clound4 {
+        width: 140%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        left: -18%;
+        max-width: none;
+    }
+    #clound5 {
+        width: 140%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        left: -18%;
+        max-width: none;
+    }
+    #clound6 {
+        width: 140%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        left: -18%;
+        max-width: none;
+    }
+    #contact {
+        width: 140%;
+        height: 100%;
+        z-index: 26;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -18%;
+        max-width: none;
+    }
+    #contacthover {
+        width: 140%;
+        height: 100%;
+        z-index: -1;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        left: -18%;
+        top: 0%;
+        bottom: 0;
+        max-width: none;
+    }
+    .showcontact {
+        width: 67%;
+        height: 54%;
+        background: transparent;
+        position: absolute;
+        top: 28%;
+        left: -21%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+}
+
+@media all and (max-width: 780px) {
+    .menu ul li {
+
+        font-size: 20px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+
+
+}
+@media all and (max-width: 680px) {
+    .menu ul li {
+
+        font-size: 16px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+}
+
+@media all and (max-width: 608px) {
+    .menu ul li {
+
+        font-size: 14px;
+
+    }
+
+    .menu div {
+
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 562px) {
+    .menu ul li {
+
+        font-size: 12px;
+
+    }
+
+    .menu div {
+
+        font-size: 12px;
+    }
+
+    .showcontact {
+        width: 77%;
+        height: 44%;
+        background: transparent;
+        position: absolute;
+        top: 32%;
+        left: -21%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+    #contacthover {
+        width: 160%;
+        height: 80%;
+        z-index: -1;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        left: -26%;
+        top: 0%;
+        bottom: 0;
+        max-width: none;
+    }
+    #contact {
+        width: 160%;
+        height: 80%;
+        z-index: 26;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -26%;
+        max-width: none;
+    }
+    #clound6 {
+        width: 160%;
+        height: 80%;
+        z-index: 15;
+        margin: auto;
+        left: -26%;
+        max-width: none;
+    }
+    #clound5 {
+        width: 160%;
+        height: 80%;
+        z-index: 15;
+        margin: auto;
+        left: -26%;
+        max-width: none;
+    }
+    #clound4 {
+        width: 160%;
+        height: 80%;
+        z-index: 15;
+        margin: auto;
+        left: -26%;
+        max-width: none;
+    }
+    #clound3 {
+        width: 160%;
+        height: 80%;
+        z-index: 20;
+        margin: auto;
+        max-width: none;
+        left: -26%;
+    }
+    #clound2 {
+        width: 160%;
+        height: 80%;
+        z-index: 25;
+        margin: auto;
+        max-width: none;
+        left: -26%;
+        top: 30%;
+    }
+    #clound1 {
+        width: 160%;
+        height: 80%;
+        z-index: 15;
+        margin: auto;
+        left: -26%;
+        top: 20%;
+        max-width: none;
+    }
+    #clight {
+        width: 159%;
+        height: 145%;
+        z-index: 40;
+        top: -20%;
+        left: -27%;
+        margin: auto;
+        animation: lspin 30s linear infinite;
+        max-width: none;
+        max-height: none;
+    }
+}
+
+@media all and (max-width: 535px){
+
+    .menu ul a {
+        color: white;
+    }
+
+
+
+    .menu ul li {
+
+        font-size: 26px;
+
+    }
+
+    .menu div {
+
+        font-size: 24px;
+    }
+
+    #menu{
+        width: 300%;
+        left: -99%;
+        position: absolute;
+    }
+    #menu li{
+        display: none;
+    }
+    #menu li#menu-main{
+
+        display: none;
+        padding: 0;
+    }
+    div.menu-mobile{
+        display: block;
+        background: #272F35;
+        margin-top: -463px;
+        transition: margin-top;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-in-out;
+        border-bottom: 2px solid #B2AFAA;
+    }
+    #menu-slide li{
+        display: block;
+        padding: 10px 0;
+    }
+    #menu-slide li:hover{
+        display: block;
+        padding: 10px 0;
+        background: rgba(255,255,255,0.3);
+    }
+    img.img-logo-mobile{
+        max-height: none;
+        margin-top: 13px;
+        margin-left: -48px;
+        height: 74px;
+        padding: 10px;
+        padding-top: 20px;
+        background: #272F35;
+        border-radius: 0 0 47px 47px;
+        cursor: pointer;
+        border: 2px solid #B2AFAA;
+        border-top: transparent;
+    }
+
+    #contact {
+        width: 190%;
+        height: 80%;
+        z-index: 26;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -32%;
+        max-width: none;
+    }
+    #contacthover {
+        width: 190%;
+        height: 80%;
+        z-index: -1;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -32%;
+        max-width: none;
+    }
+    #clight {
+        width: 165%;
+        height: 165%;
+        z-index: 40;
+        top: -30%;
+        left: -21%;
+        margin: auto;
+        animation: lspin 30s linear infinite;
+        max-width: none;
+        max-height: none;
+    }
+
+    #clound1 {
+        width: 170%;
+        height: 70%;
+        z-index: 15;
+        margin: auto;
+        left: 0%;
+        top: 31%;
+    }
+    #clound2 {
+        width: 170%;
+        height: 70%;
+        z-index: 25;
+        margin: auto;
+        left: -38%;
+        top: 44%;
+        max-width: none;
+    }
+    #clound3 {
+        width: 190%;
+        height: 100%;
+        z-index: 20;
+        margin: auto;
+        left: -49%;
+        max-width: none;
+    }
+    #clound4 {
+        width: 190%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        max-width: none;
+    }
+
+    #clound5 {
+        width: 190%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        max-width:none;
+    }
+
+    #clound6 {
+        width: 190%;
+        height: 100%;
+        z-index: 15;
+        margin: auto;
+        max-width: none;
+    }
+
+    .showcontact {
+        width: 92%;
+        height: 44%;
+        background: transparent;
+        position: absolute;
+        top: 32%;
+        left: -7%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+    .contactblock {
+        font-size: 23px;
+    }
+
+}
+
+@media all and (max-width: 390px) {
+    .contactblock {
+        font-size: 21px;
+    }
+    p {
+        -webkit-margin-before: 1.3em;
+        -webkit-margin-after: 1.3em;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .contactblock {
+        font-size: 19px;
+    }
+    p {
+        -webkit-margin-before: 1.6em;
+        -webkit-margin-after: 1.6em;
+    }
+
+}
+
+@media all and (max-width: 342px) {
+    #clight {
+        width: 185%;
+        height: 175%;
+        z-index: 40;
+        top: -35%;
+        left: -25%;
+        margin: auto;
+        animation: lspin 30s linear infinite;
+        max-width: none;
+        max-height: none;
+    }
+    #clound1 {
+        width: 170%;
+        height: 70%;
+        z-index: 15;
+        margin: auto;
+        left: 0%;
+        top: 31%;
+        max-width: none;
+    }
+    #clound2 {
+        width: 170%;
+        height: 70%;
+        z-index: 25;
+        margin: auto;
+        left: -38%;
+        top: 44%;
+        max-width: none;
+    }
+    #clound3 {
+        display: none;
+
+    }
+    #clound4 {
+        width: 190%;
+        height: 100%;
+        max-width: none;
+        z-index: 15;
+        margin: auto;
+    }
+    #clound5 {
+        width: 190%;
+        height: 100%;
+        z-index: 15;
+        max-width: none;
+        margin: auto;
+    }
+    #clound6 {
+        width: 190%;
+        height: 100%;
+        max-width: none;
+        z-index: 15;
+        margin: auto;
+    }
+    #contact {
+        width: 200%;
+        height: 70%;
+        z-index: 26;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -32%;
+    }
+    #contacthover {
+        width: 200%;
+        height: 70%;
+        z-index: -1;
+        margin: auto;
+        animation: updown 1.5s linear infinite;
+        top: 0%;
+        bottom: 0;
+        left: -32%;
+    }
+    .showcontact {
+        width: 97%;
+        height: 39%;
+        background: transparent;
+        position: absolute;
+        top: 34%;
+        left: 0%;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .contactblock {
+        font-size: 16px;
+    }
+    p {
+        -webkit-margin-before: 2.2em;
+        -webkit-margin-after: 2.2em;
+    }
+
+}

@@ -12,11 +12,11 @@
     <meta property="og:title" content="TNI World Class #3">
     <meta property="og:url" content="https://tniworldclass.com/">
     <meta property="og:image" content="/images/WC3_poster.png">
-    <link href="css/gallerystyle.css" rel="stylesheet">
+    <link href="css/schedulestyle.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/wc3gal.js"></script>
+    <script src="js/wc3schedule.js"></script>
 </head>
-<body onload="myfunction()">
+<body onload="load()">
 <div class="screen">
     <div class="menu">
         <div class="menu-center">
@@ -41,19 +41,19 @@
             <img src="images/Logo_new/button-01.png" class="img-logo-mobile" id="img-logo-mobile" alt="TNI World Class" onclick="showmobilemenu()">
         </div>
     </div>
-    <img id="gbg" class="l" src="images/GalleryPage/galver2/ver2/gall_bg.png">
-    <img id="lleft" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_left2-01.png" onclick="hidemobilemenu()">
-    <img id="lright" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_right2-01.png" onclick="hidemobilemenu()">
-    <img id="galarrowleft" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_left.png">
-    <img id="galarrowright" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_right.png">
-    <div id="imgslide">
-        <img id="galframe" class="l" src="images/GalleryPage/galver2/ver2/gall_frame.png" onclick="hidemobilemenu()">
-        <div id="outimg">
-            <img src="images/Slideimg/img1.jpg" id="img">
-        </div>
-        <div id="left_holder" onmouseover="showleft()" onmouseleave="hideleft()"><img class="left" src="images/Slideimg/arrow-left.svg" onclick="slide(-1)"></div>
-        <div id="right_holder" onmouseover="showright()" onmouseleave="hideright()"><img class="right" src="images/Slideimg/arrow-right.svg" onclick="slide(1)"></div>
-    </div>
+    <img id="sbg" src="images/edited_schedule/new_bg.png">
+    <img id="sun" src="images/edited_schedule/sun.png">
+    <img id="moon" src="images/edited_schedule/moon.png">
+    <img id="book" src="images/edited_schedule/book.png">
+    <img id="buil" src="images/edited_schedule/building.png" onclick="hidemobilemenu()">
+    <img id="flag" src="images/edited_schedule/flag.png">
+    <img id="frame" src="images/edited_schedule/text_schedule.png">
+    <img id="scro" src="images/edited_schedule/scroll.png">
+    <img id="come" src="images/edited_schedule/new_exam-01.png">
+    <img id="tun" src="images/edited_schedule/pragasToon-01.png">
+    <img id="name" src="images/edited_schedule/notifytext-01.png" onclick="hidemobilemenu()">
+    <img id="regis" src="images/edited_schedule/regisdate-01.png">
+    <img id="make" src="images/edited_schedule/cloud.png">
 </div>
 </body>
 </html>

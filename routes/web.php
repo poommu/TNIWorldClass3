@@ -17,15 +17,18 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/contacts', function () {
+    return view('contacts');
 });
 Route::get('/gallery', function () {
     return view('gallery');
 });
-Route::get('/program', function () {
-    return view('program');
+Route::get('/schedule', function () {
+    return view('schedule');
 });
-Route::get('/fqa', function () {
-    return view('fqa');
+Route::get('/faq', function () {
+    return view('faq');
+});
+Route::get('/maps', function () {
+    return view('maps');
 });

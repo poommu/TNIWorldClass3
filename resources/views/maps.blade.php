@@ -12,11 +12,12 @@
     <meta property="og:title" content="TNI World Class #3">
     <meta property="og:url" content="https://tniworldclass.com/">
     <meta property="og:image" content="/images/WC3_poster.png">
-    <link href="css/gallerystyle.css" rel="stylesheet">
+    <link href="css/mapstyle.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/wc3gal.js"></script>
+    <script src="js/wc3map.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
 </head>
-<body onload="myfunction()">
+<body onload="load()">
 <div class="screen">
     <div class="menu">
         <div class="menu-center">
@@ -41,19 +42,36 @@
             <img src="images/Logo_new/button-01.png" class="img-logo-mobile" id="img-logo-mobile" alt="TNI World Class" onclick="showmobilemenu()">
         </div>
     </div>
-    <img id="gbg" class="l" src="images/GalleryPage/galver2/ver2/gall_bg.png">
-    <img id="lleft" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_left2-01.png" onclick="hidemobilemenu()">
-    <img id="lright" class="l" src="images/GalleryPage/galver2/ver2/gall_lpillar_right2-01.png" onclick="hidemobilemenu()">
-    <img id="galarrowleft" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_left.png">
-    <img id="galarrowright" class="l" src="images/GalleryPage/galver2/ver2/gall_arrow_right.png">
-    <div id="imgslide">
-        <img id="galframe" class="l" src="images/GalleryPage/galver2/ver2/gall_frame.png" onclick="hidemobilemenu()">
-        <div id="outimg">
-            <img src="images/Slideimg/img1.jpg" id="img">
-        </div>
-        <div id="left_holder" onmouseover="showleft()" onmouseleave="hideleft()"><img class="left" src="images/Slideimg/arrow-left.svg" onclick="slide(-1)"></div>
-        <div id="right_holder" onmouseover="showright()" onmouseleave="hideright()"><img class="right" src="images/Slideimg/arrow-right.svg" onclick="slide(1)"></div>
+    <img id="mbg" src="images/maps/ComeTNI/chariotv2_BG-01.png">
+    <img id="mfro" src="images/maps/ComeTNI/chariotv2_front-01.png">
+    <img id="mhor" src="images/maps/ComeTNI/chariotv2_horsefront-01.png" onclick="hidemobilemenu()">
+    <img id="min" src="images/maps/ComeTNI/chariotv2_insidekemtis-01.png">
+    <img id="mke" src="images/maps/ComeTNI/chariotv2_kemtis-01.png">
+    <img id="mkeb" src="images/maps/ComeTNI/chariotv2_kemtis_bigcir-01.png">
+    <img id="mkes" src="images/maps/ComeTNI/chariotv2_kemtis_smallcir-01.png">
+    <img id="mstar" src="images/maps/ComeTNI/chariotv2_star-01.png">
+    <div class="showmap" onclick="showmap()"></div>
+    <div class="mapblock">
+       <center>
+            <b>
+                <u>
+                    วิธีการมาค่าย
+                </u>
+            </b>
+        </center>
+        <br>
+        <b>ที่ตั้ง</b> : สถาบันเทคโนโลยีไทย-ญี่ปุ่น 1771/1 ซ.พัฒนาการ 37 ถนนพัฒนาการ แขวงสวนหลวง เขตสวนหลวง กรุงเทพฯ 10250
+        <br>
+        <br>
+        <b>เดินทางด้วยรถไฟฟ้า</b> : ลง BTS สถานีเอกมัย ต่อรถประจำทางสาย 133 จากวัดธาตุทอง ลงที่ป้าย <b>หน้าซอยพัฒนาการ 37</b>
+        <br>
+        <br>
+        <b>เดินทางด้วยรถไฟฟ้ามหานคร</b> : ลง MRT สถานีเพชรบุรี ต่อรถประจำทางสาย 11 , 206 บนถนนเพชรบุรีตัดใหม่ ลงที่ป้าย <b>หน้าซอยพัฒนาการ 37</b>
+        <br>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.6739403201254!2d100.62603131483029!3d13.738179990356247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d61d1a422f1e1%3A0xec8b5f1d5edf5da!2z4Liq4LiW4Liy4Lia4Lix4LiZ4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14LmE4LiX4LiiLeC4jeC4teC5iOC4m-C4uOC5iOC4mSBUaGFpLU5pY2hpIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5!5e0!3m2!1sth!2sth!4v1501232254705" id="googlemap" frameborder="0" allowfullscreen></iframe>
     </div>
+    <div class="backmapblock" onclick="hidemap()"></div>
 </div>
 </body>
 </html>
